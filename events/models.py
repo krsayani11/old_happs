@@ -18,6 +18,7 @@ class EventModel(models.Model):
 	name = models.CharField(max_length=255)
 	time = models.DateTimeField()
 	longitude = models.CharField(max_length=255)
+	secret_key = models.TextField()
 	latitude = models.CharField(max_length=255)
 	user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
 	datafile = models.ImageField(('image'), blank=True, null=True, upload_to=upload_to)
